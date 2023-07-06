@@ -31,3 +31,7 @@ tgbot droptb - удаляет все записи, таблици и свзяи 
 ![](https://i.ibb.co/GFpn0c5/2023-07-06-17-42-17.png)
 ![](https://i.ibb.co/17vGq99/2023-07-06-17-43-30.png)
 ![](https://i.ibb.co/HhCKZSF/2023-07-06-17-47-45.png)
+
+## License
+
+MIT
