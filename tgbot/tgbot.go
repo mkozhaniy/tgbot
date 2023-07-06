@@ -202,7 +202,7 @@ func Start(logger *zap.Logger, product_storage interfaces.ProductStorage,
 				usr, err := user_storage.GetUserByTgid(update.Message.From.ID)
 				if usr.Admin {
 					orders, err := order_storage.GetAllOrders()
-					if err != nil && len(orders) > 0 {
+					if err == nil && len(orders) > 0 {
 						msg = viewOrders(msg, orders)
 					} else {
 						msg.Text = "Нет заказов"

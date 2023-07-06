@@ -279,7 +279,7 @@ func (pgdb Database) AddProductToBucket(bucket *models.Bucket,
 
 func (pgdb Database) GetAllOrders() ([]models.Order, error) {
 	var orders []models.Order
-	if err := pgdb.Db.Model(&models.Order{}).Find(&orders).Error; err != nil {
+	if err := pgdb.Db.Model(&models.Order{}).Preload("Products").Find(&orders).Error; err != nil {
 		return nil, err
 	}
 	return orders, nil

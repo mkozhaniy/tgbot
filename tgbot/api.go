@@ -118,6 +118,7 @@ func makeAdmin(msg tgbotapi.MessageConfig, arg string,
 	} else {
 		msg.Text = "Некорректно введены слова после комманды или неверный ключ"
 	}
+	msg.Text = "Пользователь успешно стал админом"
 	return msg
 }
 
