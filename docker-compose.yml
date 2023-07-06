@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: "botshop"
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "pass"
+      PGDATA: "/var/lib/pgdata_info"
+    ports:
+      - 5432:5432
+    volumes:
+      - "/private/var/lib/pgdata_info:/private/var/lib/pgdata_info"
